@@ -20,6 +20,76 @@
       "business": "Business 3",
       "phone": "222-321-0987",
       "website": "https://talaverapuebla.mx"
+    },
+    {
+      "name": "Restaurante Angelópolis",
+      "address": "Blvd. Atlixcáyotl 2210",
+      "business": "Business 4",
+      "phone": "222-456-7890",
+      "website": "https://angelopolisrest.mx"
+    },
+    {
+      "name": "Muebles Coloniales",
+      "address": "Av. Juárez 789",
+      "business": "Business 5",
+      "phone": "222-234-5678",
+      "website": "https://mueblescoloniales.com.mx"
+    },
+    {
+      "name": "Textiles Poblanos",
+      "address": "Calle 2 Norte 567",
+      "business": "Business 6",
+      "phone": "222-876-5432",
+      "website": "https://textilespoblanos.mx"
+    },
+    {
+      "name": "Dulcería El Ángel",
+      "address": "Av. 16 de Septiembre 432",
+      "business": "Business 7",
+      "phone": "222-345-6789",
+      "website": "https://dulceriaelangel.com"
+    },
+    {
+      "name": "Arquitectos Modernos",
+      "address": "Calzada Zavaleta 1234",
+      "business": "Business 8",
+      "phone": "222-765-4321",
+      "website": "https://arquitectosmodernos.mx"
+    },
+    {
+      "name": "Clínica San Rafael",
+      "address": "Av. Las Torres 890",
+      "business": "Business 9",
+      "phone": "222-567-8901",
+      "website": "https://clinicasanrafael.com.mx"
+    },
+    {
+      "name": "Imprenta Digital",
+      "address": "Calle 3 Sur 678",
+      "business": "Business 10",
+      "phone": "222-654-3210",
+      "website": "https://imprentadigital.mx"
+    },
+    {
+      "name": "Autopartes González",
+      "address": "Blvd. Hermanos Serdán 345",
+      "business": "Business 11",
+      "phone": "222-890-1234",
+      "website": "https://autopartesgonzalez.com"
+    },
+    {
+      "name": "Farmacia del Centro",
+      "address": "Av. 5 Poniente 901",
+      "business": "Business 12",
+      "phone": "222-432-1098",
+      "website": "https://farmaciadelcentro.mx"
+    },
+    {
+      "name": "Seguros Poblanos",
+      "address": "Torre JV, Piso 15",
+      "business": "Business 13",
+      "phone": "222-789-0123",
+      "website": "https://segurospoblanos.com.mx"
     }
   ]
 }
