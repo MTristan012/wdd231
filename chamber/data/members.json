@@ -1,0 +1,25 @@
+{
+  "members": [
+    {
+      "name": "Café Puebla",
+      "address": "Calle 5 de Mayo 123",
+      "business": "Business 1",
+      "phone": "222-123-4567",
+      "website": "https://cafepuebla.com"
+    },
+    {
+      "name": "TechMX Solutions",
+      "address": "Av. Reforma 456",
+      "business": "Business 2",
+      "phone": "222-987-6543",
+      "website": "https://techmx.com"
+    },
+    {
+      "name": "Artesanías La Talavera",
+      "address": "Centro Histórico",
+      "business": "Business 3",
+      "phone": "222-321-0987",
+      "website": "https://talaverapuebla.mx"
+    }
+  ]
+}

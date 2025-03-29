@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Directorio de Miembros | Cámara de Comercio de Puebla</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Puebla Chamber of Commerce</h1>
+            <nav>
+                <button id="menu-toggle">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a class="active" href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="podcast.html">Podcast</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Directorio de Miembros</h2>
+
+        <div class="view-toggle">
+            <button id="grid-view">🟦 Grid</button>
+            <button id="list-view">📄 List</button>
+        </div>
+
+        <div id="members-container" class="grid-view"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Cámara de Comercio de Puebla</p>
+        <p>Last Modification <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/directory.js"></script>
+    <script src="./scripts/getdates.js"></script>
+</body>
+
+</html>

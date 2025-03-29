@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join | Puebla Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Puebla Chamber of Commerce</h1>
+            <nav>
+                <button id="menu-toggle">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a class="active" href="join.html">Join</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="podcast.html">Podcast</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Become a Member!</h2>
+
+        <section>
+            <p>Being part of the Puebla Chamber of Commerce connects you with opportunities for growth, visibility and
+            networking.</p>
+
+            <h3>Membership Levels</h3>
+            <table class="membership-table">
+                <thead>
+                    <tr>
+                        <th>Leves</th>
+                        <th>Benefits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Non-Profit</td>
+                        <td>Directory listing, monthly publications</td>
+                    </tr>
+                    <tr>
+                        <td>Silver</td>
+                        <td>Includes all of the above + training and social networks</td>
+                    </tr>
+                    <tr>
+                        <td>Gold</td>
+                        <td>All of the above + lunches, sponsorships and advertising</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h3>Registration form</h3>
+            <form id="membership-form">
+                <label for="name">Business Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="level">Membership Level:</label>
+                <select id="level" name="level" required>
+                    <option value="">Select a level</option>
+                    <option value="Non-Profit">Non-Profit</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Gold">Gold</option>
+                </select>
+
+                <label for="comments">Additional comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+
+                <button type="submit">Submit Request</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Puebla Chamber of Commerce</p>
+        <p>Last Modification <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/join.js"></script>
+    <script src="./scripts/getdates.js"></script>
+</body>
+
+</html>
