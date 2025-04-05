@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -32,13 +32,13 @@
 
         <section>
             <p>Being part of the Puebla Chamber of Commerce connects you with opportunities for growth, visibility and
-            networking.</p>
-
+                networking.</p>
+        
             <h3>Membership Levels</h3>
             <table class="membership-table">
                 <thead>
                     <tr>
-                        <th>Leves</th>
+                        <th>Level</th>
                         <th>Benefits</th>
                     </tr>
                 </thead>
@@ -57,32 +57,119 @@
                     </tr>
                 </tbody>
             </table>
+        
+            <div class="membership-cards">
+                <div class="card" id="np-card">
+                    <h4>Non-Profit</h4>
+                    <p>No membership fee for non-profit organizations.</p>
+                    <button onclick="openModal('np-modal')">More Info</button>
+                </div>
+        
+                <div class="card" id="silver-card">
+                    <h4>Silver</h4>
+                    <p>Includes training and exposure through social media.</p>
+                    <button onclick="openModal('silver-modal')">More Info</button>
+                </div>
+        
+                <div class="card" id="gold-card">
+                    <h4>Gold</h4>
+                    <p>Top-tier membership with advertising and event access.</p>
+                    <button onclick="openModal('gold-modal')">More Info</button>
+                </div>
+            </div>
+        
+            <!-- MODALES -->
+            <div class="modal" id="np-modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('np-modal')">&times;</span>
+                    <h3>Non-Profit Membership</h3>
+                    <ul>
+                        <li>Free directory listing</li>
+                        <li>Monthly publications</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="modal" id="silver-modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('silver-modal')">&times;</span>
+                    <h3>Silver Membership</h3>
+                    <ul>
+                        <li>All Non-Profit benefits</li>
+                        <li>Training workshops</li>
+                        <li>Social media promotions</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="modal" id="gold-modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('gold-modal')">&times;</span>
+                    <h3>Gold Membership</h3>
+                    <ul>
+                        <li>All Silver benefits</li>
+                        <li>Networking lunches</li>
+                        <li>Event sponsorships</li>
+                        <li>Business advertising</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section>
             <h3>Registration form</h3>
-            <form id="membership-form">
-                <label for="name">Business Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone">
-
-                <label for="level">Membership Level:</label>
-                <select id="level" name="level" required>
-                    <option value="">Select a level</option>
-                    <option value="Non-Profit">Non-Profit</option>
-                    <option value="Silver">Silver</option>
-                    <option value="Gold">Gold</option>
-                </select>
-
-                <label for="comments">Additional comments:</label>
-                <textarea id="comments" name="comments" rows="4"></textarea>
-
-                <button type="submit">Submit Request</button>
+            <form id="membership-form" method="get" action="./thankyou.html">
+            
+                <label>
+                    First Name:
+                    <input type="text" name="firstName" required title="First Name" autocomplete="given-name" />
+                </label>
+            
+                <label>
+                    Last Name:
+                    <input type="text" name="lastName" required title="Last Name" autocomplete="family-name" />
+                </label>
+            
+                <label>
+                    Organization Title:
+                    <input type="text" name="orgTitle" title="Your Title in Organization" autocomplete="organization-title"
+                        pattern="[A-Za-z\s\-]{7,}" />
+                </label>
+            
+                <label>
+                    Email:
+                    <input type="email" name="email" required title="Email" autocomplete="email" placeholder="example@email.com" />
+                </label>
+            
+                <label>
+                    Mobile Phone:
+                    <input type="tel" name="phone" required title="Mobile Number" autocomplete="tel" />
+                </label>
+            
+                <label>
+                    Organization Name:
+                    <input type="text" name="organization" required title="Organization Name" autocomplete="organization" />
+                </label>
+            
+                <label>
+                    Membership Level:
+                    <select name="membership" required title="Select Membership Level">
+                        <option value="">Select a level</option>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+            
+                <label>
+                    Description:
+                    <textarea name="description" title="Business Description"></textarea>
+                </label>
+            
+                <input type="hidden" name="timestamp" id="timestamp" />
+            
+                <input type="submit" value="Join the Chamber" />
             </form>
         </section>
     </main>
@@ -95,6 +182,16 @@
     <script src="./scripts/script.js"></script>
     <script src="./scripts/join.js"></script>
     <script src="./scripts/getdates.js"></script>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
