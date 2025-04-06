@@ -302,6 +302,49 @@ form textarea {
     cursor: pointer;
 }
 
+.gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+.card:nth-child(1) { grid-area: card1; }
+
+.card img {
+  width: 300px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 641px) {
+  .gallery {
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+@media (min-width: 1025px) {
+  .gallery {
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+  }
+}
+
 @media (max-width: 600px) {
   .nav-menu {
     flex-direction: column;
