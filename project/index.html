@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover and explore Pokémon with dynamic info cards." />
+    <title>Pokemon Info Cards</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="images/Poké_Ball_icon.svg.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <h1>Pokemon Info Cards</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pokemon.html">Pokémon</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Welcome to the Ultimate Pokémon Database</h2>
+            <p>Explore data-rich info cards of your favorite Pokémon with real-time API integration!</p>
+            <a href="pokemon.html" class="cta-button">Explore Pokémon</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Pokemon Info Cards | Data from <a rel=noopener href="https://pokeapi.co/" target="_blank">PokéAPI</a></p>
+        <p>&copy; <span id="currentyear"></span> Michel Tristan Perea de la Cruz - Mexico</p>
+        <p>Last Modification <span id="lastModified"></span></p>
+    </footer>
+    <script type="module" src="scripts/pokemon.js"></script>
+    <script type="module" src="scripts/getdates.js"></script>
+</body>
+
+</html>

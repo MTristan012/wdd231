@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact page for Pokemon Info Cards site" />
+    <title>Contact Us | Pokemon Info Cards</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="images/Poké_Ball_icon.svg.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pokemon.html">Pokémon</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <form action="thankyou.html" method="get" class="contact-form" onsubmit="saveName()">
+
+            <label for="name">Name:<span>*</span></label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:<span>*</span></label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="favorite">Favorite Pokémon:</label>
+            <input type="text" id="favorite" name="favorite" />
+
+            <label for="message">Message:<span>*</span></label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pokémon Info Cards</p>
+        <p>&copy; <span id="currentyear"></span> Michel Tristan Perea de la Cruz - Mexico</p>
+        <p>Last Modification <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        function saveName() {
+            const name = document.getElementById('name').value;
+            localStorage.setItem('userName', name);
+        }
+    </script>
+
+    <script type="module" src="scripts/getdates.js"></script>
+</body>
+
+</html>

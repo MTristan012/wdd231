@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Thank you page for submitted form" />
+    <title>Thank You | Pokemon Info Cards</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="images/Poké_Ball_icon.svg.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <h1>Thank You!</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pokemon.html">Pokémon</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="confirmation">
+            <h2>Your message has been received</h2>
+            <p>We’ll get back to you soon. Here's what you submitted:</p>
+            <ul id="submitted-data"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pokémon Info Cards</p>
+        <p>&copy; <span id="currentyear"></span> Michel Tristan Perea de la Cruz - Mexico</p>
+        <p>Last Modification <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const dataList = document.getElementById('submitted-data');
+        const userName = localStorage.getItem('userName');
+
+        if (userName) {
+            const greeting = document.createElement('h3');
+            greeting.textContent = `Hello, ${userName}! 👋`;
+            dataList.before(greeting);
+        }
+
+        for (const [key, value] of params.entries()) {
+            const item = document.createElement('li');
+            item.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`;
+            dataList.appendChild(item);
+        }
+    </script>
+
+    <script type="module" src="scripts/getdates.js"></script>
+    
+</body>
+
+</html>

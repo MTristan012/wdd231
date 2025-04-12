@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore dynamic info cards of your favorite Pokémon." />
+    <title>Explore Pokémon</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="images/Poké_Ball_icon.svg.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <h1>Pokemon Info Cards</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pokemon.html">Pokémon</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="pokemon-container" class="card-grid">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pokemon Info Cards | Data from <a rel=noopener href="https://pokeapi.co/" target="_blank">PokéAPI</a>
+        </p>
+        <p>&copy; <span id="currentyear"></span> Michel Tristan Perea de la Cruz - Mexico</p>
+        <p>Last Modification <span id="lastModified"></span></p>
+    </footer>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <div id="modal-details">
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="scripts/pokemon.js"></script>
+    <script type="module" src="scripts/getdates.js"></script>
+</body>
+
+</html>
